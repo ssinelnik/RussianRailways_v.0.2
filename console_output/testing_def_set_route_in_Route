@@ -1,0 +1,64 @@
+/Users/alexandersinelnik/.zprofile:1: no such file or directory: /opt/homebrew/bin/brew
+Using /Users/alexandersinelnik/.rvm/gems/ruby-3.0.0
+alexandersinelnik@Alexanders-MacBook-Air RussianRailways v.0.2 % ls
+cargo_train.rb          main.rb                 passenger_train.rb      route.rb                train.rb
+cargo_wagon.rb          modules                 passenger_wagon.rb      station.rb              wagon.rb
+alexandersinelnik@Alexanders-MacBook-Air RussianRailways v.0.2 % irb
+3.0.0 :001 > load './main.rb'
+ => true
+3.0.0 :002 > passenger_wagon_1 = PassengerWagon.new("1")
+ => #<PassengerWagon:0x00007fbb99329db0 @number="1", @type=:passenger>
+3.0.0 :003 > passenger_wagon_2 = PassengerWagon.new("2")
+ => #<PassengerWagon:0x00007fbb992a9b10 @number="2", @type=:passenger>
+3.0.0 :004 > passenger_wagon_3 = PassengerWagon.new("3")
+ => #<PassengerWagon:0x00007fbb992a19b0 @number="3", @type=:passenger>
+3.0.0 :005 > passenger_train_1 = PassengerTrain.new("30561")
+ => #<PassengerTrain:0x00007fbb97124fa8 @current_speed=0, @number="30561", @type=:passenger, @wagons=[]>
+3.0.0 :006 > passenger_train_1.wagons
+ => []
+3.0.0 :007 > passenger_train_1.add_wagon(passenger_wagon_1)
+ => [#<PassengerWagon:0x00007fbb99329db0 @number="1", @type=:passenger>]
+3.0.0 :008 > passenger_train_1.add_wagon(passenger_wagon_2)
+ => [#<PassengerWagon:0x00007fbb99329db0 @number="1", @type=:passenger>, #<PassengerWagon:0x00007fbb992a9b10 @number="2", @type=:passenger>]
+3.0.0 :009 > passenger_train_1.add_wagon(passenger_wagon_3)
+ =>
+[#<PassengerWagon:0x00007fbb99329db0 @number="1", @type=:passenger>,
+ #<PassengerWagon:0x00007fbb992a9b10 @number="2", @type=:passenger>,
+ #<PassengerWagon:0x00007fbb992a19b0 @number="3", @type=:passenger>]
+3.0.0 :010 > passenger_train_1.wagons
+ =>
+[#<PassengerWagon:0x00007fbb99329db0 @number="1", @type=:passenger>,
+ #<PassengerWagon:0x00007fbb992a9b10 @number="2", @type=:passenger>,
+ #<PassengerWagon:0x00007fbb992a19b0 @number="3", @type=:passenger>]
+3.0.0 :011 > chelyabinsk = Station.new("Chelyabinsk")
+ => #<Station:0x00007fbb99318998 @name="Chelyabinsk", @trains_on_station=[]>
+3.0.0 :012 > novosibirsk = Station.new("Novosibirsk")
+ => #<Station:0x00007fbb993b8bc8 @name="Novosibirsk", @trains_on_station=[]>
+3.0.0 :013 > Station.all
+ =>
+[#<Station:0x00007fbb99318998 @name="Chelyabinsk", @trains_on_station=[]>,
+ #<Station:0x00007fbb993b8bc8 @name="Novosibirsk", @trains_on_station=[]>]
+3.0.0 :014 > route_1 = Route.new("Chelyabinsk - Novosibirsk", chelyabinsk, novosibirsk)
+ =>
+#<Route:0x00007fbb9930bc98
+...
+3.0.0 :015 > Route.instance
+ => 1
+3.0.0 :016 > passenger_train_1.set_route(route_1)
+ =>
+[#<PassengerTrain:0x00007fbb97124fa8
+  @current_speed=0,
+  @current_station=#<Station:0x00007fbb99318998 @name="Chelyabinsk", @trains_on_station=[...]>,
+  @number="30561",
+  @route=
+   #<Route:0x00007fbb9930bc98
+    @name="Chelyabinsk - Novosibirsk",
+    @stations=
+     [#<Station:0x00007fbb99318998 @name="Chelyabinsk", @trains_on_station=[...]>,
+      #<Station:0x00007fbb993b8bc8 @name="Novosibirsk", @trains_on_station=[]>]>,
+  @type=:passenger,
+  @wagons=
+   [#<PassengerWagon:0x00007fbb99329db0 @number="1", @type=:passenger>,
+    #<PassengerWagon:0x00007fbb992a9b10 @number="2", @type=:passenger>,
+    #<PassengerWagon:0x00007fbb992a19b0 @number="3", @type=:passenger>]>]
+3.0.0 :017 >

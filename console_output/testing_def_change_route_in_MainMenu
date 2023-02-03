@@ -1,0 +1,82 @@
+/bin/zsh -c "bash -c '/Users/alexandersinelnik/.rvm/bin/rvm ruby-3.0.0 do /Users/alexandersinelnik/.rvm/rubies/ruby-3.0.0/bin/ruby '\"'\"'/Users/alexandersinelnik/RubymineProjects/RussianRailways v.0.2/main.rb'\"'\"''"
+
+      Enter [1] to create a station.
+      Enter [2] to create a train.
+      Enter [3] to create or change a route.
+      Enter [4] to set a train route.
+      Enter [5] to add or delete wagons.
+      Enter [6] to move the train by route.
+      Enter [7] to watch BIG LIST (stations and trains).
+      Enter [8] to create an wagon.
+      Enter [0] to exit.
+1
+Enter station name -> Chelyabinsk
+The station Chelyabinsk was been created!
+
+      Enter [1] to create a station.
+      Enter [2] to create a train.
+      Enter [3] to create or change a route.
+      Enter [4] to set a train route.
+      Enter [5] to add or delete wagons.
+      Enter [6] to move the train by route.
+      Enter [7] to watch BIG LIST (stations and trains).
+      Enter [8] to create an wagon.
+      Enter [0] to exit.
+1
+Enter station name -> Novosibirsk
+The station Novosibirsk was been created!
+
+      Enter [1] to create a station.
+      Enter [2] to create a train.
+      Enter [3] to create or change a route.
+      Enter [4] to set a train route.
+      Enter [5] to add or delete wagons.
+      Enter [6] to move the train by route.
+      Enter [7] to watch BIG LIST (stations and trains).
+      Enter [8] to create an wagon.
+      Enter [0] to exit.
+1
+Enter station name -> StPetersburg
+The station StPetersburg was been created!
+
+      Enter [1] to create a station.
+      Enter [2] to create a train.
+      Enter [3] to create or change a route.
+      Enter [4] to set a train route.
+      Enter [5] to add or delete wagons.
+      Enter [6] to move the train by route.
+      Enter [7] to watch BIG LIST (stations and trains).
+      Enter [8] to create an wagon.
+      Enter [0] to exit.
+3
+Create or change a route? (create/change) -> create
+Enter route name -> Chelyabinsk-Novosibirsk
+Enter first station name -> Chelyabinsk
+Enter last station name -> Novosibirsk
+The route Chelyabinsk-Novosibirsk was been created!
+
+      Enter [1] to create a station.
+      Enter [2] to create a train.
+      Enter [3] to create or change a route.
+      Enter [4] to set a train route.
+      Enter [5] to add or delete wagons.
+      Enter [6] to move the train by route.
+      Enter [7] to watch BIG LIST (stations and trains).
+      Enter [8] to create an wagon.
+      Enter [0] to exit.
+3
+Create or change a route? (create/change) -> change
+Enter route name -> Chelyabinsk-Novosibirsk
+Add or delete station? (add/delete) -> add
+Station name -> StPetersburg
+Error!
+
+      Enter [1] to create a station.
+      Enter [2] to create a train.
+      Enter [3] to create or change a route.
+      Enter [4] to set a train route.
+      Enter [5] to add or delete wagons.
+      Enter [6] to move the train by route.
+      Enter [7] to watch BIG LIST (stations and trains).
+      Enter [8] to create an wagon.
+      Enter [0] to exit.

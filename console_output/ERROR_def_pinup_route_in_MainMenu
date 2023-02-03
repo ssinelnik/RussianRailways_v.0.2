@@ -1,0 +1,104 @@
+/bin/zsh -c "bash -c '/Users/alexandersinelnik/.rvm/bin/rvm ruby-3.0.0 do /Users/alexandersinelnik/.rvm/rubies/ruby-3.0.0/bin/ruby '\"'\"'/Users/alexandersinelnik/RubymineProjects/RussianRailways v.0.2/main.rb'\"'\"''"
+
+      Enter [1] to create a station.
+      Enter [2] to create a train.
+      Enter [3] to create or change a route.
+      Enter [4] to set a train route.
+      Enter [5] to add or delete wagons.
+      Enter [6] to move the train by route.
+      Enter [7] to watch BIG LIST (stations and trains).
+      Enter [8] to create an wagon.
+      Enter [0] to exit.
+      --------------------------------------------------
+      Enter [999] to run show_for_developers.
+1
+Enter station name -> Chelyabinsk
+The station Chelyabinsk was created!
+
+      Enter [1] to create a station.
+      Enter [2] to create a train.
+      Enter [3] to create or change a route.
+      Enter [4] to set a train route.
+      Enter [5] to add or delete wagons.
+      Enter [6] to move the train by route.
+      Enter [7] to watch BIG LIST (stations and trains).
+      Enter [8] to create an wagon.
+      Enter [0] to exit.
+      --------------------------------------------------
+      Enter [999] to run show_for_developers.
+1
+Enter station name -> Novosibirsk
+The station Novosibirsk was created!
+
+      Enter [1] to create a station.
+      Enter [2] to create a train.
+      Enter [3] to create or change a route.
+      Enter [4] to set a train route.
+      Enter [5] to add or delete wagons.
+      Enter [6] to move the train by route.
+      Enter [7] to watch BIG LIST (stations and trains).
+      Enter [8] to create an wagon.
+      Enter [0] to exit.
+      --------------------------------------------------
+      Enter [999] to run show_for_developers.
+3
+Create or change a route? (create/change) -> create
+Enter route name -> Chelyabinsk-Novosibirsk
+Enter first station name -> Chelyabinsk
+Enter last station name -> Novosibirsk
+The route Chelyabinsk-Novosibirsk was created!
+
+      Enter [1] to create a station.
+      Enter [2] to create a train.
+      Enter [3] to create or change a route.
+      Enter [4] to set a train route.
+      Enter [5] to add or delete wagons.
+      Enter [6] to move the train by route.
+      Enter [7] to watch BIG LIST (stations and trains).
+      Enter [8] to create an wagon.
+      Enter [0] to exit.
+      --------------------------------------------------
+      Enter [999] to run show_for_developers.
+2
+Enter train number (5 symbols length) -> 34201
+Enter train type (cargo/passenger) -> passenger
+The train 34201 was created!
+
+      Enter [1] to create a station.
+      Enter [2] to create a train.
+      Enter [3] to create or change a route.
+      Enter [4] to set a train route.
+      Enter [5] to add or delete wagons.
+      Enter [6] to move the train by route.
+      Enter [7] to watch BIG LIST (stations and trains).
+      Enter [8] to create an wagon.
+      Enter [0] to exit.
+      --------------------------------------------------
+      Enter [999] to run show_for_developers.
+999
+1. Stations: [#<Station:0x00007fcaaf84d3f8 @name="Chelyabinsk", @trains_on_station=[]>, #<Station:0x00007fcaaf84cd40 @name="Novosibirsk", @trains_on_station=[]>]
+2. Routes: [#<Route:0x00007fcaaf84c3b8 @name="Chelyabinsk-Novosibirsk", @stations=[#<Station:0x00007fcaaf84d3f8 @name="Chelyabinsk", @trains_on_station=[]>, #<Station:0x00007fcaaf84cd40 @name="Novosibirsk", @trains_on_station=[]>]>]
+3. Trains: [#<PassengerTrain:0x00007fcaae117580 @number="34201", @current_speed=0, @wagons=[], @type=:passenger>]
+4. Wagons: []
+
+      Enter [1] to create a station.
+      Enter [2] to create a train.
+      Enter [3] to create or change a route.
+      Enter [4] to set a train route.
+      Enter [5] to add or delete wagons.
+      Enter [6] to move the train by route.
+      Enter [7] to watch BIG LIST (stations and trains).
+      Enter [8] to create an wagon.
+      Enter [0] to exit.
+      --------------------------------------------------
+      Enter [999] to run show_for_developers.
+4
+Enter route name -> Chelyabinsk-Novosibirsk
+Enter train number -> 13
+/Users/alexandersinelnik/RubymineProjects/RussianRailways v.0.2/main_menu.rb:122:in `pinup_route': undefined method `set_route' for nil:NilClass (NoMethodError)
+	from /Users/alexandersinelnik/RubymineProjects/RussianRailways v.0.2/main_menu.rb:32:in `block in start'
+	from /Users/alexandersinelnik/RubymineProjects/RussianRailways v.0.2/main_menu.rb:10:in `loop'
+	from /Users/alexandersinelnik/RubymineProjects/RussianRailways v.0.2/main_menu.rb:10:in `start'
+	from /Users/alexandersinelnik/RubymineProjects/RussianRailways v.0.2/main.rb:16:in `<main>'
+
+Process finished with exit code 1
