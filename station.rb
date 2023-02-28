@@ -24,6 +24,10 @@ class Station
     register_instance
   end
 
+  def test_functional_block(functional_block)
+    @trains_on_station.each { |element| functional_block.call }
+  end
+
   def trains_by_type(type) # type = class name (CargoTrain or PassengerTrain)
     @trains_on_station.each { |train| puts train.number if train.kind_of?(type) } # kind_of?(Class Object)
   end

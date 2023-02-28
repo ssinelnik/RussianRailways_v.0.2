@@ -28,6 +28,15 @@ class Train
     register_instance
   end
 
+  def test_functional_block(functional_block)
+    number = yield
+    # @@trains.find { |train| train.number == number }
+    @@trains.find do |train|
+      train.number == number
+      functional_block.call
+    end
+  end
+
   def stop
     self.current_speed = 0
   end
